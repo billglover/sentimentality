@@ -5,6 +5,11 @@
     "access_token_key": "YOUR_ACCESS_TOKEN_KEY",
     "access_token_secret": "YOUR_ACCESS_TOKEN_SECRET"
   },
+  "lights": {
+  	"hostname": "power.local.address",
+  	"user": "admin",
+  	"password": ""
+  	},
   "track": "christmas",
   "duration": 30000 
 }
