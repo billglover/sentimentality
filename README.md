@@ -2,7 +2,6 @@
 
 Sentimental Christmas Lighting - Why? Because we can.
 
-<<<<<<< HEAD
 ## The Software
 
 You need to create a configuration file. The easiest way to do this is to copy the sample provided and then modify it with your API key and search terms.
@@ -22,10 +21,4 @@ And then run the app with:
     node app.js
 
 ## The Hardware
-=======
-## The Hardware
-
-
-## The Software
->>>>>>> 63117c2a3ddb8a65aef1de529eeba7dc60a1b09a
 
