@@ -1,0 +1,22 @@
+{
+  "name": "Sentimentality",
+  "preferGlobal": false,
+  "version": "0.0.1",
+  "author": "Bill Glover <bill@billglover.co.uk>",
+  "description": "",
+  "contributors": [ 
+    {
+      "name": "Bill Glover",
+      "email": "bill@billglover.co.uk"
+    } 
+  ],
+  "dependencies" : {
+    "twitter": "0.2.5",
+    "Sentimental": "0.0.4",
+    "nconf": "0.6.9",
+    "fixed-array": "0.1.1"
+  },
+  "engines": {
+    "node": ">=0.10.23"
+  }
+}
