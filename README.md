@@ -38,3 +38,12 @@ And, unless you've chagned the defaults, the app will run for 30s and then termi
 
 ## The Hardware
 
+We just happened to have an IP Power switch laying around the office. For the purposes of the demo, we used the following:
+
+- 1x Aviosys IP Power 9258S
+- 1x string of red LEDs
+- 1x string of green LEDs
+
+The users manual for the IP Power Switch can be found here: http://www.aviosys.com/9258st.html
+
+
