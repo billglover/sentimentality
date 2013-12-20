@@ -35,19 +35,36 @@ var setLights = function setLights(lights) {
 };
 
 // some helpful light control functions
-var toggleRed = function toggleRed(lights) {
-  lights.red = (lights.red == 0 ? 1 : 0);
+var flickerRed = function flickerRed(lights) {
+  // make sure lights are red to start with
+  lights.red = 1;
+  lights.green = 0;
   setLights(lights);
+
+  // flickr lights
+  lights.red = 0;
+  setTimeout(setLights(lights),2000);
+  lights.red = 1;
+  setTimeout(setLights(lights),4000);
 };
 
-var toggleGreen = function toggleRed(lights) {
-  lights.green = (lights.green == 0 ? 1 : 0);
+var flickerGreen = function flickerGreen(lights) {
+  // make sure lights are green to start with
+  lights.green = 1;
+  lights.red = 0;
   setLights(lights);
+
+  // flickr lights
+  lights.green = 0;
+  setTimeout(setLights(lights),2000);
+  lights.green = 1;
+  setTimeout(setLights(lights),4000);
 };
 
-var toggleBoth = function toggleRed(lights) {
-  lights.red = (lights.red == 0 ? 1 : 0);
-  lights.green = (lights.green == 0 ? 1 : 0);
+var allOn = function allOn(lights) {
+  // set both colours on
+  lights.red = 1;
+  lights.green = 1;
   setLights(lights);
 };
 
@@ -70,7 +87,6 @@ var processTweet = function processTweet(tweet) {
   if(tweet.lang === 'en') {
     var score = analyze(tweet.text).comparative;
     lastn.push(score);
-
     console.log();
     console.log(tweet.user.name + ': ' + tweet.text );
     console.log('score: ' + score);
@@ -78,11 +94,11 @@ var processTweet = function processTweet(tweet) {
 
     // toggle green for positive, red for negative, or both for indiference
     if ( score > 0 ) {
-        toggleGreen(lights);
+        flickerGreen(lights);
     } else if ( score < 0 ) {
-        toggleRed(lights);
+        flickerRed(lights);
     } else {
-        toggleBoth(lights);
+        allOn(lights);
     }
   };
 };
